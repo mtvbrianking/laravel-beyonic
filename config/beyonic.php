@@ -1,8 +1,6 @@
 <?php
 
 return [
-    'debug' => env('BEYONIC_DEBUG', true),
-
     'api' => [
         'base_uri' => env('BEYONIC_API_URI', 'https://api.beyonic.com/api/'),
         'token' => env('BEYONIC_API_TOKEN'),
