@@ -19,9 +19,17 @@ class Collection
     protected $client;
 
     /**
-     * Set HTTP client.
+     * Constructor.
      *
-     * @param \GuzzleHttp\ClientInterface $client
+     * @uses \Illuminate\Container\Container
+     */
+    public function __construct()
+    {
+        $this->client = $this->makeClient();
+    }
+
+    /**
+     * Set HTTP client.
      */
     public function setClient(ClientInterface $client)
     {
@@ -39,20 +47,10 @@ class Collection
     }
 
     /**
-     * Constructor.
-     *
-     * @uses \Illuminate\Container\Container
-     */
-    public function __construct()
-    {
-        $this->client = $this->makeClient();
-    }
-
-    /**
      * Collect funds from a customer.
      *
      * @param string $payee
-     * @param float  $amount
+     * @param float $amount
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
@@ -86,8 +84,6 @@ class Collection
 
     /**
      * Retrieve all collections.
-     *
-     * @param int $collectionId
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      *

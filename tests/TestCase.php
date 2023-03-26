@@ -1,4 +1,5 @@
 <?php
+
 namespace Bmatovu\Beyonic\Tests;
 
 use Bmatovu\Beyonic\BeyonicServiceProvider;
@@ -26,13 +27,13 @@ abstract class TestCase extends Orchestra
     /**
      * Fake Guzzle HTTP client.
      *
-     * @param  mixed $response
+     * @param mixed $response
      *
      * @return \GuzzleHttp\ClientInterface
      */
     protected function fakeHttpClient($response)
     {
-        if (is_array($response)) {
+        if (\is_array($response)) {
             $responses = $response;
         } else {
             $responses[] = $response;
@@ -44,9 +45,9 @@ abstract class TestCase extends Orchestra
 
         return new Client([
             'base_uri' => 'https://api.example.fake/beyonic/',
-            'handler'  => $handlerStack,
-            'headers'  => [
-                'Accept'       => 'application/json',
+            'handler' => $handlerStack,
+            'headers' => [
+                'Accept' => 'application/json',
                 'Content-Type' => 'application/json',
             ],
         ]);

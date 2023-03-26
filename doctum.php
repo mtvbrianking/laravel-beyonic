@@ -1,26 +1,27 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Doctum\Doctum;
 use Doctum\RemoteRepository\GitHubRemoteRepository;
 use Doctum\Version\GitVersionCollection;
 use Symfony\Component\Finder\Finder;
 
-$dir = __DIR__.'/src';
+$dir = __DIR__ . '/src';
 
 $iterator = Finder::create()
     ->files()
     ->name('*.php')
+    ->exclude('bin')
     ->exclude('tests')
     ->exclude('vendor')
     ->in($dir);
 
 $versions = GitVersionCollection::create($dir)
-    ->add('master', 'Master branch');
+    ->add('main', 'Main branch');
 
 $repo = new GitHubRemoteRepository(
-    'mtvbrianking/laravel-beyonic-api',
+    'mtvbrianking/laravel-beyonic',
     dirname($dir),
     'https://github.com/'
 );
@@ -28,9 +29,9 @@ $repo = new GitHubRemoteRepository(
 $options = [
     'theme' => 'default',
     'versions' => $versions,
-    'title' => 'Laravel Beyonic API',
-    'build_dir' => __DIR__.'/docs',
-    'cache_dir' => __DIR__.'/docs/cache',
+    'title' => 'Laravel Beyonic',
+    'build_dir' => __DIR__ . '/docs',
+    'cache_dir' => __DIR__ . '/docs/cache',
     'remote_repository' => $repo,
     'default_opened_level' => 3,
 ];

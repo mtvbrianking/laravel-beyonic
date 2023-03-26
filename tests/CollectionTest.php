@@ -11,7 +11,7 @@ use GuzzleHttp\Psr7\Response;
  */
 class CollectionTest extends TestCase
 {
-    public function test_can_ask_payee_to_pay()
+    public function testCanAskPayeeToPay()
     {
         $body = ['key' => 'value'];
 
@@ -23,16 +23,16 @@ class CollectionTest extends TestCase
 
         $collector = new Collection();
 
-        $this->assertInstanceOf(ClientInterface::class, $collector->getClient());
+        static::assertInstanceOf(ClientInterface::class, $collector->getClient());
 
         $collector->setClient($client);
 
         $response = $collector->ask('+80000000001', 3000);
 
-        $this->assertInstanceOf(Response::class, $response);
+        static::assertInstanceOf(Response::class, $response);
     }
 
-    public function test_can_get_single_collection()
+    public function testCanGetSingleCollection()
     {
         $body = ['key' => 'value'];
 
@@ -48,10 +48,10 @@ class CollectionTest extends TestCase
 
         $response = $collector->get('22594213');
 
-        $this->assertInstanceOf(Response::class, $response);
+        static::assertInstanceOf(Response::class, $response);
     }
 
-    public function test_can_get_all_collections()
+    public function testCanGetAllCollections()
     {
         $body = ['key' => 'value'];
 
@@ -67,6 +67,6 @@ class CollectionTest extends TestCase
 
         $response = $collector->all();
 
-        $this->assertInstanceOf(Response::class, $response);
+        static::assertInstanceOf(Response::class, $response);
     }
 }
