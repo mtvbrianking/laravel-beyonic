@@ -11,12 +11,12 @@ class PhoneTest extends TestCase
 {
     public function testCanFormatPhoneNo()
     {
-        static::assertSame('+256788747744', Phone::toIntlFormat('0788747744'));
-        static::assertSame('+256788747744', Phone::toIntlFormat('+256788747744'));
-        static::assertSame('+256788747744', Phone::toIntlFormat('256788747744'));
-        static::assertSame('+256788747744', Phone::toIntlFormat('+256 (788) 747-744'));
+        static::assertSame('+256772123456', Phone::toIntlFormat('0772123456'));
+        static::assertSame('+256772123456', Phone::toIntlFormat('+256772123456'));
+        static::assertSame('+256772123456', Phone::toIntlFormat('256772123456'));
+        static::assertSame('+256772123456', Phone::toIntlFormat('+256 (772) 123-456'));
 
-        static::assertSame('+2560788747744', Phone::toIntlFormat('+256 (0) 788-747744'));
-        static::assertSame('+788747744', Phone::toIntlFormat('788747744'));
+        static::assertSame('+2560772123456', Phone::toIntlFormat('+256 (0) 772-123456'));
+        static::assertSame('+772123456', Phone::toIntlFormat('772123456'));
     }
 }

@@ -5,7 +5,7 @@ return [
 
     'api' => [
         'base_uri' => env('BEYONIC_API_URI', 'https://api.beyonic.com/api/'),
-        'token' => env('BEYONIC_API_TOKEN', 'ab594c14986612f6167a975e1c369e71edab6900'),
+        'token' => env('BEYONIC_API_TOKEN'),
         'version' => env('BEYONIC_API_VERSION', 'v3'),
     ],
 
