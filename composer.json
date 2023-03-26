@@ -1,5 +1,5 @@
 {
-  "name": "bmatovu/laravel-beyonic-api",
+  "name": "bmatovu/laravel-beyonic",
   "description": "Laravel wrapper for Beyonic API",
   "type": "library",
   "license": "MIT",
