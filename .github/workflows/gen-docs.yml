@@ -1,12 +1,10 @@
 name: gen-docs
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "*"
-
-# on:
-#   workflow_dispatch:
 
 jobs:
   docs:
