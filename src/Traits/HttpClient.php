@@ -9,7 +9,7 @@ use GuzzleHttp\Middleware;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Config\Repository;
 use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
+use Monolog\Level;
 use Psr\Log\LoggerInterface;
 
 trait HttpClient
@@ -27,7 +27,7 @@ trait HttpClient
 
         $handlerStack = HandlerStack::create();
 
-        if ($config->get('beyonic.debug')) {
+        if ($config->get('debug')) {
             $handlerStack->push($this->getLogMiddleware());
         }
 
@@ -40,7 +40,7 @@ trait HttpClient
             'headers' => [
                 'Accept' => 'application/json',
                 'Beyonic-Version' => $config->get('beyonic.api.version'),
-                'Authorization' => 'Token '.$config->get('beyonic.api.token'),
+                'Authorization' => 'Token ' . $config->get('beyonic.api.token'),
                 'Content-Type' => 'application/json',
             ],
         ], (array) $config->get('beyonic.guzzle.options'));
@@ -60,7 +60,7 @@ trait HttpClient
         $logManager = Container::getInstance()->make(LoggerInterface::class);
         $logger = $logManager->getLogger();
         $streamHandler = new StreamHandler(storage_path('logs/beyonic.log'));
-        $logger->pushHandler($streamHandler, Logger::DEBUG);
+        $logger->pushHandler($streamHandler, Level::Debug);
         $messageFormatter = new MessageFormatter(MessageFormatter::DEBUG);
 
         return Middleware::log($logger, $messageFormatter);
