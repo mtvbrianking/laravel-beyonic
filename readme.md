@@ -13,11 +13,10 @@
 This package helps you integrate the [Beyonic](https://developer.mfsafrica.com/docs/overview-5) into your Laravel application.
 
 *Sign up and create your client application*
-[Sandbox](https://app.beyonic.com)
-[Live](https://payments.beyonic.com)
 
-Menu --> Manage my account
-Settings --> Organizations --> Users
+[Sandbox](https://app.beyonic.com)
+
+[Live](https://payments.beyonic.com)
 
 ### [Installation](https://packagist.org/packages/bmatovu/laravel-beyonic)
 
@@ -29,7 +28,7 @@ composer require bmatovu/laravel-beyonic
 
 **Configuration customization**
 
-If you wish to customize the default configurations, you may export the default configuration using
+If you wish to customize the default configurations, you may export the default configurations using
 
 ```bash
 php artisan vendor:publish --provider="Bmatovu\Beyonic\BeyonicServiceProvider" --tag="config"
