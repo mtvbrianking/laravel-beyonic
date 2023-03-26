@@ -3,10 +3,10 @@
 [![Total Downloads](https://poser.pugx.org/bmatovu/laravel-beyonic/downloads)](https://packagist.org/packages/bmatovu/laravel-beyonic)
 [![Latest Stable Version](https://poser.pugx.org/bmatovu/laravel-beyonic/v/stable)](https://packagist.org/packages/bmatovu/laravel-beyonic)
 [![License](https://poser.pugx.org/bmatovu/laravel-beyonic/license)](https://packagist.org/packages/bmatovu/laravel-beyonic)
-[![Code Quality](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/?branch=master)
+[![Code Quality](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/?branch=main)
+[![Code Coverage](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/mtvbrianking/laravel-beyonic/?branch=main)
 [![Tests](https://github.com/mtvbrianking/laravel-beyonic/workflows/run-tests/badge.svg)](https://github.com/mtvbrianking/laravel-beyonic/actions?query=workflow:run-tests)
-[![Documentation](https://github.com/mtvbrianking/laravel-beyonic/workflows/gen-docs/badge.svg)](https://mtvbrianking.github.io/laravel-beyonic/master)
+[![Documentation](https://github.com/mtvbrianking/laravel-beyonic/workflows/gen-docs/badge.svg)](https://mtvbrianking.github.io/laravel-beyonic/main)
 
 ### Introduction
 
